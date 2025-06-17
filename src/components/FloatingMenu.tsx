@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import { Link } from "react-router";
 
 const FloatingMenu = () => {
-  const { ref, inView } = useInView({
+  const { ref } = useInView({
     triggerOnce: true, // Trigger only once
     threshold: 1.0,    // The sentinel element needs to be fully visible
   });
