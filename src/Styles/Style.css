@@ -63,7 +63,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 2rem 0;
-  padding: 1rem;
+  padding: 0rem;
   /* gap-y-8 by default, override gap-x in md */
 }
 
@@ -71,6 +71,7 @@
   .hero-grid {
     column-gap: 2rem;
     /* md:gap-x-8 */
+    padding: 1rem;
   }
 }
 
@@ -83,11 +84,14 @@
   .hero-text {
     grid-column: span 7;
   }
+  .hero-description {
+    grid-column: span 5 / span 5;
+  }
 }
 
 .hero-description {
   display: grid;
-  grid-column: span 5 / span 5;
+  grid-column: span 12;
   opacity: 0;
   transform: translateY(10rem);
   animation: revealUp 0.5s ease-out 3s forwards;
@@ -100,15 +104,22 @@
   }
 }
 
-.hero-description>div {
-  margin: 0px auto;
+
+@media (min-width: 1024px) {
+  .hero-description p{
+    margin-left: 31px;
+  }
+  .hero-description>div {
+    margin: 0px auto;
+  }
 }
+
 
 .hero-description p {
   font-family: system-ui;
   max-width: 32rem;
   font-size: 19px;
-  margin-left: 31px;
+  margin-left: 0px;
   /* letter-spacing: 1px; */
   color: #b1b1b1;
   line-height: 27px;
@@ -226,10 +237,17 @@
   }
 }
 
+
 .sidebar {
   grid-column: span 12;
-  grid-column: span 4;
 }
+
+@media (min-width: 1024px) {
+  .sidebar {
+    grid-column: span 4;
+  }
+}
+
 
 .sticky-header {
   position: -webkit-sticky;
@@ -242,10 +260,24 @@
   font-weight: 600;
 }
 
+
 .content {
-  grid-column: 6 / span 7;
+  grid-column: span 12;
+
+}
+
+@media (min-width: 1024px) {
+  .content {
+    grid-column: 6 / span 7;
+    grid-column-start: 6;
+  }
+}
+
+
+.content {
+
   font-family: sans-serif;
-  grid-column-start: 6;
+
   margin-top: 2rem;
 }
 
@@ -323,10 +355,16 @@
 
 
 
+@media (min-width: 1024px) {
+  .donate-content {
+    padding: 8.75rem 1.5rem;
+  }
+}
+
 
 /* donate-section Section padding and spacing */
 .donate-section {
-  padding: 8.75rem 1.5rem;
+  padding: 2.75rem .5rem;
   /* background: black; */
  opacity: 0;
   transform: translateY(100px) translateZ(0);
@@ -355,7 +393,7 @@ padding-bottom:8rem ;
 /* Grid system equivalent */
 .donate-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   row-gap: 2rem;
   font-family: sans-serif;
   column-gap: 0;
@@ -412,9 +450,19 @@ padding-bottom:8rem ;
 }
 
 /* Buttons layout */
+
+@media (min-width: 1024px) {
+  .donate-buttons {
+    flex-direction: row !important;
+  }
+
+  .donate-button {
+    width: max-content !important;
+  }
+}
 .donate-buttons {
   display: flex;
-  flex-wrap: wrap;
+ flex-direction: column;
   gap: 0.5rem;
   align-items: center;
   margin-top: 1rem;
@@ -422,6 +470,7 @@ padding-bottom:8rem ;
 
 /* Button styling */
 .donate-button {
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;

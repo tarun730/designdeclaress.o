@@ -73,10 +73,15 @@
   
   @media (max-width: 640px) {
     .floating-menu {
-      left: 1rem;
+      left: .1rem;
       right: auto;
     }
   
+
+    .floating-menu{
+      width: 100% !important;
+    }
+
     .menu-container {
       width: auto !important;
       background: white;
@@ -84,13 +89,7 @@
     }
   }
   
-  @media (min-width: 768px) {
-    .floating-menu {
-      bottom: 1.5rem;
-      right: 1.5rem;
-    }
-  }
-  
+
 
 
 
@@ -216,4 +215,24 @@
   }
   
   
+    /* mobile section ----------------------------------------------------------------------------------------- */
+
+
+  @media (min-width: 360px) {
+    .floating-menu {
+      bottom: 1.5rem;
+      right: 1.5rem;
+    }
+
+    .menu-container.menu-closed {
+      max-width: 100%;
+  }
+  .menu-container.menu-auto {
+    max-width: 100%;
+    max-height: 500px;
+   
+  }
+
+
+  }
   

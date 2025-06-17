@@ -148,6 +148,11 @@ font-size: 12px;
     color: white;
   }
   
+
+
+
+
+    /* mobile section ----------------------------------------------------------------------------------------- */
   /* Responsive tweaks */
   @media (min-width: 768px) {
     .footer-logo {
@@ -186,3 +191,8 @@ font-size: 12px;
     }
   }
   
+
+
+
+
+
