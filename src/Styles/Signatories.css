@@ -1,0 +1,83 @@
+.Signatories_text{
+    grid-column: span 12 / span 12;
+    font-size:1.5rem;
+    display: flex;
+        align-items: center;
+        gap: 11px;
+}
+.donate-grid:has(.Signatories) {
+font-family: sans-serif;
+    row-gap: 0rem !important;
+}
+.Signatories{
+    font-weight: 100;
+    font-size: 4rem;
+    margin: 0px;
+    margin-bottom: -24px;
+}
+.badge {
+    padding: .15rem 0.75rem;
+    display: inline-block;
+    max-width: fit-content;
+    border-radius: 9999px;         
+    padding: 0.15rem 0.75rem;      
+    font-size: 0.75rem;            
+    font-weight: 600;              
+    color: black;           
+    transition: color 0.2s ease, background-color 0.2s ease; 
+    background-color: rgb(255 99 64);
+  }
+
+
+  .columns-responsive {
+    column-count: 3; /* Default */
+    grid-column: span 12 / span 12;
+    margin-top: 2.5rem;
+
+  }
+  
+  /* ≥ 640px */
+  @media (min-width: 640px) {
+    .columns-responsive {
+      column-count: 4;
+    }
+  }
+  
+  /* ≥ 1024px */
+  @media (min-width: 1024px) {
+    .columns-responsive {
+      column-count: 6;
+    }
+  }
+  .custom-link {
+    display: block;
+    position: relative;
+    font-family: sans-serif;
+    max-width: fit-content;
+    width: fit-content;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 500;   /* font-medium */
+    color: rgb(196 196 196);     /* assuming text-brand-gray-400 is a medium gray */
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  }
+  
+  .custom-link:hover,
+  .custom-link:focus {
+    color: #ffffff; /* text-brand-white */
+    text-decoration: underline;
+  }
+  
+  /* Optional: If you want to replicate Tailwind’s focus ring more precisely */
+  .custom-link:focus {
+    outline: 2px solid #ffffff; /* or your custom focus ring color */
+    outline-offset: 2px;
+  }
+  
+  /* Container query (requires container setup) */
+  @media (min-width: 1280px) {
+    .columns-responsive {
+      column-count: 9;
+    }
+  }
+  

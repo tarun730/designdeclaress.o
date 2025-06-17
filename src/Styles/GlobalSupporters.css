@@ -1,0 +1,30 @@
+.section {
+    margin-bottom: 0.75rem; /* mb-3 */
+  }
+  
+  .section-title {
+    font-size: .75rem;      /* text-xs */
+    font-weight: bold;    
+    margin: 0px;   /* font-bold */
+  }
+  
+  .section-link {
+    display: block;                    /* block */
+    max-width: fit-content;           /* max-w-fit */
+    font-family: Helvetica, sans-serif; /* font-helvetica */
+    font-size: 0.75rem;               /* text-xs */
+    font-weight: 500;                 /* font-medium */
+    color: var(--brand-gray-400);    /* text-brand-gray-400 */
+    position: relative;
+    width: fit-content;
+    transition: color 0.2s ease;
+    text-decoration: none;
+  }
+  
+  .section-link:hover,
+  .section-link:focus {
+    color: var(--brand-white);        /* hocus:text-brand-white */
+    text-decoration: underline;       /* hocus:underline */
+    outline: none;                    /* focus-ring can include more if needed */
+  }
+  
